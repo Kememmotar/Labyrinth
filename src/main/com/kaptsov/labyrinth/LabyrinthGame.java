@@ -1,11 +1,6 @@
 package com.kaptsov.labyrinth;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URLDecoder;
 import java.nio.file.Paths;
-import java.util.jar.JarOutputStream;
 
 public class LabyrinthGame {
 
