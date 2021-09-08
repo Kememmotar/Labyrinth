@@ -8,4 +8,7 @@ public class Labyrinths {
         this.data = data;
     }
 
+    public boolean[][] getData() {
+        return data;
+    }
 }

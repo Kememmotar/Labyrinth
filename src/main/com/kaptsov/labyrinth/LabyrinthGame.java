@@ -9,7 +9,8 @@ public class LabyrinthGame {
     public static void main(String[] args) {
         databaseLabyrinths = new DatabaseLabyrinths();
         databaseLabyrinths.loadAndCreate(Paths.get("").toAbsolutePath().normalize().toString() + "\\src\\LabyrinthFiles");
-        System.out.println(databaseLabyrinths.getLabyrinthCount());
+        DataToStart dataToStart = new InputDataToStart().InputData(databaseLabyrinths);
+        
     }
 
 }
