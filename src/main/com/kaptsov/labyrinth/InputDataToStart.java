@@ -12,14 +12,14 @@ public class InputDataToStart {
         while (number < 1 || number > countLabyrinth) {
             number = scanner.nextInt();
         }
-        Labyrinths labyrinths = databaseLabyrinths.getLabyrinths(number - 1);
+        Labyrinths labyrinths = databaseLabyrinths.getLabyrinths(number);
         int sizeLabyrinthX = labyrinths.getData().length;
         int sizeLabyrinthY = labyrinths.getData()[0].length;
-        System.out.println("Input X (2 - " + (sizeLabyrinthX - 1) + "): ");
+        System.out.println("Input X (2 - " + (sizeLabyrinthY - 1) + "): ");
         while (x < 2 || x > (sizeLabyrinthX - 1)) {
             x = scanner.nextInt();
         }
-        System.out.println("Input Y (2 - " + (sizeLabyrinthY - 1) + "): ");
+        System.out.println("Input Y (2 - " + (sizeLabyrinthX - 1) + "): ");
         while (y < 2 || y > (sizeLabyrinthY - 1)) {
             y = scanner.nextInt();
         }

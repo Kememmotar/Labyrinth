@@ -1,9 +1,7 @@
 package com.kaptsov.labyrinth;
 
-public interface Tree extends Iterable {
+public interface Tree {
 
-    void clear();
-
-    boolean add();
+    boolean contains(int x, int y, ElementTree elementTree);
 
 }

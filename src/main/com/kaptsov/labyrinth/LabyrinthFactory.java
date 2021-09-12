@@ -14,19 +14,19 @@ public class LabyrinthFactory {
             e.printStackTrace();
             return null;
         }
-        int x = 0, y = 0, tempY = 1;
+        int x = 0, y = 0, tempY = 0;
         String [] splitted;
         if (sc.hasNext()) {
             splitted = sc.nextLine().split(" ");
             y = Integer.parseInt(splitted[0]);
             x = Integer.parseInt(splitted[1]);
         }
-        boolean[][] data = new boolean[x][y];
+        boolean[][] data = new boolean[y][x];
         while (sc.hasNext()) {
             if (tempY == y) break;
             splitted = sc.nextLine().split("");
             for (int i = 0; i < x; i++)
-                data[i][tempY] = !splitted[i].equals("#");
+                data[tempY][i] = !splitted[i].equals("#");
             tempY++;
         }
         return new Labyrinths(data);
