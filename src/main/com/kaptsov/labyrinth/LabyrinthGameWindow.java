@@ -10,7 +10,7 @@ public class LabyrinthGameWindow {
 
     public void launch() {
 
-        DataToStart dataToStart = new ChooseDataToStart(databaseLabyrinths).ChooseData();
+        new ChooseDataToStart(databaseLabyrinths).ChooseData();
 
     }
 

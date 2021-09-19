@@ -42,7 +42,7 @@ public class LabyrinthWalkthrough {
         int y = data.length, x = data[0].length;
         int getX = dataToStart.getX()-1;
         int getY = dataToStart.getY()-1;
-        if (!data[getX][getY]) return false;
+        if (!data[getY][getX]) return false;
         boolean isExit = checkIsExit(getX, getY, x, y, data[getY][getX]);
         myTree.firstElement = new ElementTree(isExit, 0, null, getX, getY);
         if (isExit) {

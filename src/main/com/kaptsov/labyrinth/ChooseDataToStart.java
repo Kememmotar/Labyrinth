@@ -14,19 +14,19 @@ public class ChooseDataToStart {
         this.databaseLabyrinths = databaseLabyrinths;
     }
 
-    public DataToStart ChooseData() {
+    public void ChooseData() {
 
         WindowCreater windowCreater = new WindowCreater();
         //choose labyrinth
         JFrame chooseLabyrinth =  windowCreater.create("Choose labyrinth", databaseLabyrinths.getLabyrinthCount() * 48, 60);
         ChooseNumberLabyrinth chooseNumberLabyrinth = new ChooseNumberLabyrinth(chooseLabyrinth, databaseLabyrinths.getLabyrinthCount());
-        numberLabyrinth = chooseNumberLabyrinth.choose();
+        chooseNumberLabyrinth.choose(databaseLabyrinths);
 
-        System.out.println(numberLabyrinth);
+        //System.out.println(numberLabyrinth);
         //choose coordinates
-        JFrame chooseCoordinates =  windowCreater.create("Choose coordinates", 480, 600);
-        chooseCoordinates.setVisible(true);
+        //JFrame chooseCoordinates =  windowCreater.create("Choose coordinates", 480, 600);
+        //chooseCoordinates.setVisible(true);
         //write path
-        return new DataToStart(1, 1, databaseLabyrinths.getLabyrinths(numberLabyrinth-1));
+        //return new DataToStart(1, 1, databaseLabyrinths.getLabyrinths(numberLabyrinth-1));
     }
 }
