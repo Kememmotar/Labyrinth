@@ -12,7 +12,7 @@ import java.util.List;
 
 public class FinderLabyrinth {
 
-    public String[] find() {
+    public List<String> find() {
 
         List<String> listFiles = new ArrayList<String>();
         String path = Paths.get("").toAbsolutePath().normalize().toString() + "\\src\\LabyrinthFiles";
@@ -25,7 +25,7 @@ public class FinderLabyrinth {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return (String[])listFiles.toArray();
+        return listFiles;
     }
 
 }
